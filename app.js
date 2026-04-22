@@ -59,7 +59,7 @@
 
     cover.classList.toggle("is-monk", c.composer === "monk");
     cover.classList.toggle("is-parker", c.composer === "parker");
-    coverTitle.textContent = c.firstAlbum || c.title;
+    coverTitle.textContent = shortAlbum(c.firstAlbum) || c.title;
     coverComposer.textContent = label;
 
     cover.innerHTML = "";
@@ -87,13 +87,18 @@
     const lab = document.createElement("div");
     lab.className = "label";
     const t = document.createElement("span");
-    t.textContent = c.firstAlbum || c.title;
+    t.textContent = shortAlbum(c.firstAlbum) || c.title;
     const s = document.createElement("small");
     s.textContent = label;
     lab.appendChild(t);
     lab.appendChild(s);
     v.appendChild(lab);
     cover.appendChild(v);
+  }
+
+  function shortAlbum(a) {
+    if (!a) return "";
+    return a.replace(/\s*\([^)]*\)\s*$/, "").trim();
   }
 
   $("shuffle").addEventListener("click", pick);

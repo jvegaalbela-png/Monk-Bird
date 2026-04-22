@@ -71,22 +71,27 @@ html, body {
 
 .card {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 28px;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 28px;
+  align-items: start;
 }
 
 @media (max-width: 620px) {
-  .card { grid-template-columns: 1fr; }
-  .cover { justify-self: center; }
+  .card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+  .cover { justify-self: center; width: 180px; height: 180px; }
 }
 
 .cover {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   position: relative;
   border-radius: 6px;
   overflow: hidden;
@@ -103,7 +108,7 @@ html, body {
 .vinyl {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, #1a1a20 0 38%, #0a0a0c 38% 39%, #1a1a20 39% 60%, #0a0a0c 60% 61%, #1a1a20 61% 100%);
+  background: radial-gradient(circle at 50% 50%, #1a1a20 0 60%, #0a0a0c 60% 61%, #1a1a20 61% 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,8 +123,8 @@ html, body {
 }
 
 .label {
-  width: 44%;
-  height: 44%;
+  width: 58%;
+  height: 58%;
   border-radius: 50%;
   background: var(--accent);
   color: #1b1405;
@@ -128,19 +133,30 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
+  padding: 10px 8px;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 1.2;
-  box-shadow: 0 0 0 4px #0a0a0c, inset 0 0 0 30px rgba(0,0,0,0.04);
+  font-size: 11px;
+  line-height: 1.15;
+  box-shadow: 0 0 0 3px #0a0a0c, inset 0 0 0 22px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.label span {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .label small {
   display: block;
-  margin-top: 4px;
-  font-size: 10px;
+  margin-top: 5px;
+  font-size: 9px;
   font-weight: 500;
-  opacity: 0.75;
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .cover.is-parker .label { background: var(--parker); color: #08131d; }
