@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monk / Bird — Random Composition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <header class="bar">
+      <h1>Monk <span class="slash">/</span> Bird</h1>
+      <div class="filters">
+        <label><input type="checkbox" id="f-monk" checked /> Monk</label>
+        <label><input type="checkbox" id="f-parker" checked /> Parker</label>
+      </div>
+    </header>
+
+    <section class="card" id="card" aria-live="polite">
+      <div class="cover" id="cover">
+        <div class="vinyl">
+          <div class="label">
+            <span id="cover-title">—</span>
+            <small id="cover-composer"></small>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="composer" id="composer">—</div>
+        <h2 class="title" id="title">Press the button</h2>
+        <dl class="facts">
+          <div><dt>Composed</dt><dd id="composed">—</dd></div>
+          <div><dt>First recorded</dt><dd id="recorded">—</dd></div>
+          <div><dt>First appeared on</dt><dd id="album">—</dd></div>
+        </dl>
+        <p class="anecdote" id="anecdote"></p>
+        <div class="actions">
+          <a id="youtube" class="btn-link" href="#" target="_blank" rel="noopener">Listen on YouTube ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <button id="shuffle" class="shuffle" type="button">Pick a random tune</button>
+
+    <footer class="foot">
+      <span id="count">—</span>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
