@@ -695,15 +695,6 @@ const COMPOSITIONS = [
   },
   {
     composer: "parker",
-    title: "Cheers",
-    yearComposed: "1947",
-    yearFirstRecorded: "Feb 19, 1947",
-    firstAlbum: "Charlie Parker – Dial",
-    albumArtUrl: null,
-    anecdote: "One of four originals from Parker's first post-Camarillo session, with Howard McGhee and Wardell Gray. A toast to being alive."
-  },
-  {
-    composer: "parker",
     title: "Carvin' the Bird",
     yearComposed: "1947",
     yearFirstRecorded: "Feb 19, 1947",
